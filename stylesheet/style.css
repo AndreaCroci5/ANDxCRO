@@ -1,0 +1,212 @@
+:root {
+    --bg-color: #0f0f1b;
+    --primary: #00fff7;
+    --secondary: #ff00cc;
+    --accent: #39ff14;
+    --text-color: #e0e0e0;
+    --font-family: 'Orbitron', sans-serif;
+    --glow: 0 0 8px var(--primary), 0 0 16px var(--secondary);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    overflow-x: hidden;
+}
+
+/* Canvas background */
+#grid-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #1a1a2e;
+    border-bottom: 2px solid var(--secondary);
+    box-shadow: var(--glow);
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: var(--primary);
+    text-shadow: var(--glow);
+}
+
+.navbar nav a {
+    margin-left: 1.5rem;
+    color: var(--accent);
+    line-height: 1;
+    text-decoration: none;
+    font-weight: bold;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar nav a:hover {
+    color: var(--secondary);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+}
+
+.glitch {
+    font-size: 3rem;
+    text-shadow: var(--glow);
+}
+
+@keyframes glitch {
+    0%, 100% { transform: none; }
+    20% { transform: translate(2px, -2px); }
+    40% { transform: translate(-2px, 2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(-2px, -2px); }
+}
+
+/* Typewriter Effect */
+.typewriter::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.subtext {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Cards */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: #1a1a2e;
+    padding: 1.5rem;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    box-shadow: var(--glow);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px var(--accent), 0 0 40px var(--primary);
+}
+
+/* Button */
+button {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: var(--glow);
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: var(--primary);
+    color: #000;
+}
+
+/* Terminal Section */
+.terminal {
+    background: #0d0d18;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 800px;
+    border: 1px solid var(--secondary);
+    box-shadow: var(--glow);
+    border-radius: 8px;
+}
+
+.terminal-header {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.terminal-body {
+    background: #111;
+    padding: 1rem;
+    font-family: monospace;
+    font-size: 1rem;
+    color: var(--accent);
+    border-radius: 4px;
+}
+
+#terminal-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-family: monospace;
+    font-size: 1rem;
+    margin-top: 1rem;
+    outline: none;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    margin-bottom: 0.8rem;
+}
+
+.post a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.post a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+.contact-link {
+    color: var(--accent); /* oppure --primary o qualsiasi altro colore */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+

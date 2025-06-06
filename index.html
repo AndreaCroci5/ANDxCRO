@@ -1,52 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to my page</title>
-  <style>
-    body {
-      background-color: #0c0c0d;
-      color: #33ffcc;
-      font-family: 'Courier New', Courier, monospace;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .container {
-      text-align: center;
-      border: 2px solid #33ffcc;
-      padding: 20px;
-      box-shadow: 0 0 15px #33ffcc;
-      animation: glow 1.5s infinite alternate;
-    }
-    h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-    p {
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
-    @keyframes glow {
-      from {
-        box-shadow: 0 0 10px #33ffcc;
-      }
-      to {
-        box-shadow: 0 0 20px #00ff99;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ANDxCRO - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="stylesheet/style.css" />
 </head>
 <body>
-<div class="container">
-  <h1>Welcome to my page</h1>
-  <p>The site is still under maintenance :(</p>
-  <p>It will be released soon</p>
-</div>
+<canvas id="grid-bg"></canvas>
+
+<header class="navbar">
+  <div class="logo">ANDxCRO</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="pages/about.html">About</a>
+    <a href="pages/interests.html">Interessi</a>
+    <a href="pages/blog.html">Blog</a>
+    <a href="pages/contact.html">Contatti</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1 class="glitch typewriter" data-text="Benvenuto su ANDxCRO"></h1>
+  <p class="subtext">Il mio Mondo. Il mio Regno. Il mio Spazio.</p>
+  <button onclick="location.href='#about'">Scopri di più</button>
+</section>
+
+<section class="container" id="about">
+  <div class="card">
+    <h2>Chi sono</h2>
+    <p>Mi chiamo Andrea, sono appassionato di tecnologia, letteratura, anime e videogiochi</p>
+  </div>
+  <div class="card" id="interests">
+    <h2>Interessi</h2>
+    <ul>
+      <li>💾 Programmazione</li>
+      <li>🎵 Musica</li>
+      <li>🎮 Anime e videogiochi</li>
+    </ul>
+  </div>
+  <div class="card" id="projects">
+    <h2>In sviluppo</h2>
+    <p>Manga, libri, videogiochi, software, modellazione 3d, websites</p>
+  </div>
+</section>
+
+<section class="terminal">
+  <div class="terminal-header">> Interactive Shell</div>
+  <div class="terminal-body">
+    <div id="terminal-output"></div>
+    <input type="text" id="terminal-input" placeholder="> Enter command..." autocomplete="off" />
+  </div>
+</section>
+
+
+<footer>
+  <p>© 2025 ANDxCRO. Tutti i diritti riservati.</p>
+</footer>
+
+<script src="index.js"></script>
 </body>
 </html>
